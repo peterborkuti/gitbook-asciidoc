@@ -4,3 +4,5 @@ This is the book description.
 
 other content
 ...
+
+include::test/fixtures/include.txt[lines=2]

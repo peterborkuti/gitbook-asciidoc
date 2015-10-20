@@ -25,4 +25,20 @@ describe('Readme parsing', function () {
     it('should extract the right description', function() {
         assert.equal(LEXED.description, "This is the book description.");
     });
+
+    it('should include file "include.txt"', function() {
+        assert.equal(LEXED.paragraphs.indexOf('include.txt'), -1);
+    });
+
+    it('should not contain "line1"', function() {
+        assert.equal(LEXED.paragraphs.indexOf('line1'), -1);
+    });
+
+    it('should not contain "line3"', function() {
+        assert.equal(LEXED.paragraphs.indexOf('line3'), -1);
+    });
+
+    it('should contain line2', function() {
+        assert.equal(LEXED.paragraphs.indexOf('line2') > -1, true);
+    });
 });
